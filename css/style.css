@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #1E252B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool {
+  width: 392px;
+  padding: 2px;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+}
+.tool-wrap {
+  padding: 33px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 15px;
+}
+.tool::after {
+  content: "";
+  display: block;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background: rgba(255, 110, 48, 0.6);
+  filter: blur(25px);
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  z-index: -2;
+}
+.tool::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  background: linear-gradient(55deg, rgba(40, 48, 54, 0.6) 0%, rgba(0, 0, 0, 0) 60%, rgba(40, 48, 54, 0.6) 100%);
+}
